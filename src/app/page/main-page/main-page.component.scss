@@ -1,7 +1,26 @@
 .main-container {
   display: flex;
+  align-items: center;
   flex-flow: column wrap;
-  height: 200vh;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
 
+.fixed {
+  position: fixed;
+  bottom: 0;
+}
 
+@media screen and (min-width: 1400px) {
+  .main-container {
+    max-width: 1400px;
+  }
+}
+
+  @media screen and (min-width: 768px) {
+    .main-container {
+      padding: 4rem;
+    }
 }

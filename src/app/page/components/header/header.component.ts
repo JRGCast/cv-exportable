@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { ExportableToolbarComponent } from '../exportable-toolbar/exportable-toolbar.component';
 
 @Component({
@@ -7,8 +7,6 @@ import { ExportableToolbarComponent } from '../exportable-toolbar/exportable-too
   standalone: true,
   imports: [CommonModule, ExportableToolbarComponent],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}
