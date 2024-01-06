@@ -1,3 +1,35 @@
-* {
-  font-family: sans-serif;
+// colors
+$titles: #000;
+$subtitles: #646464;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $titles;
+  font-family: 'Calibri', sans-serif;
+  margin: 0;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+a {
+  font-size: 0.75rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p,
+a,
+a:visited {
+  font-family: 'Courier New', 'Courier', 'monospace', sans-serif;
+  color: $subtitles;
 }

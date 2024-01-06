@@ -1,0 +1,21 @@
+.icon-n-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.info-n-image-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar-wrapper {
+  flex-shrink: 0;
+  width: 100px;
+
+  img {
+    aspect-ratio: 1/1;
+    display: block;
+    width: 100%;
+  }
+}

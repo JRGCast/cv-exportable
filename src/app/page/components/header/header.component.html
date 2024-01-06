@@ -1,4 +1,16 @@
 <section>
- <h1>Header</h1>
- <app-exportable-toolbar></app-exportable-toolbar>
+  <div class="info-n-image-wrapper">
+    <div class="header-info-wrapper">
+      <h1>{{userData.name}}</h1>
+      <p>{{userData.summary}}</p>
+      <app-contacts-bar></app-contacts-bar>
+      <div *ngFor="let iconInfo of allIconInfos;" class="icon-n-text-wrapper">
+        <img src="{{iconInfo.src}}" alt="{{iconInfo.alt}}" height="14px">
+        <a [href]="iconInfo.url" target="_blank" rel="noopener">{{iconInfo.innerTxt}}</a>
+      </div>
+    </div>
+    <div class="avatar-wrapper">
+      <img src="https://avatars.githubusercontent.com/u/69092560" alt="João R. G. Castaldi">
+    </div>
+  </div>
 </section>
