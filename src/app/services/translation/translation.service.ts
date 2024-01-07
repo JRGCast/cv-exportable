@@ -1,7 +1,7 @@
 import { Injectable, Signal, signal } from '@angular/core';
 import { mainData } from 'src/app/data/data.config';
 import { MainData } from 'src/app/data/types/dataconfig.model';
-import { LanguagesAvailable } from 'src/app/data/types/languages.model';
+import { LanguagesAvailable, mDataTranslations } from 'src/app/data/types/languages.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,10 @@ export class TranslationService {
   private readonly mainDataSignal = signal<MainData>(mainData);
 
   translateTo(languageDesired: LanguagesAvailable): void {
-    // TODO: config files with languages available
+    this.mainDataSignal.update((mData) => {
+      mData = { ...mData, ...mDataTranslations[languageDesired] };
+      return mData;
+    });
   }
 
   get getMDataSignal(): Signal<MainData> {

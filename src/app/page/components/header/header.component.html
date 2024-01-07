@@ -1,11 +1,10 @@
 <section>
   <div class="info-n-image-wrapper">
     <div class="header-info-wrapper">
-      <h1>{{userData.name}}</h1>
-      <p>{{userData.summary}}</p>
-      <app-contacts-bar></app-contacts-bar>
+      <h1>{{userData().name}}</h1>
+      <p>{{userData().summary}}</p>
       <div *ngFor="let iconInfo of allIconInfos;" class="icon-n-text-wrapper">
-        <img src="{{iconInfo.src}}" alt="{{iconInfo.alt}}" height="14px">
+        <img src="{{iconInfo.src}}" alt="{{iconInfo.alt}}" width="15px">
         <a [href]="iconInfo.url" target="_blank" rel="noopener">{{iconInfo.innerTxt}}</a>
       </div>
     </div>
