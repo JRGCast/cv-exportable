@@ -1,13 +1,23 @@
 <section>
   <h2>Work Experience</h2>
-  <div *ngFor="let workXp of workExperiences;" class="icon-n-text-wrapper">
+  <div *ngFor="let workExp of workExperiences()" class="workexp-container">
     <div class="header-n-period">
       <h3>
-        <a href="company site">Company Name</a>
-        <span>Remote or not</span>
+        <a class="company-link" href="{{ workExp.url }}">{{ workExp.companyName }}</a>
+        <span class="remote-badge">{{ workExp.remoteOrNot ? 'Remote' : 'Hybrid' }}</span>
       </h3>
+      <div class="period-wrapper">
+        <span>{{ workExp.start | date: 'MM/yyyy' }}</span>-<span>{{ workExp.end ? (workExp.end | date: 'MM/yyyy') : 'Now'  }}</span>
+      </div>
     </div>
-    <h4>Job title</h4>
-    <p>Description</p>
+    <div class="title-description-techs">
+      <h4>{{workExp.jobTitle}}</h4>
+      <p>{{workExp.description}}</p>
+      <ng-container *ngIf="workExp.stacks.length">
+        <div class="techs">
+          <span *ngFor="let tech of workExp.stacks">{{tech}}</span>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </section>

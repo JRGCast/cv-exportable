@@ -11,5 +11,5 @@ import { TranslationService } from 'src/app/services/translation/translation.ser
 })
 export class AboutComponent {
   tService = inject(TranslationService);
-  aboutTxt = computed(() => this.tService.getMDataSignal().about);
+  readonly aboutTxt = computed(() => this.tService.getMDataSignal().about);
 }
