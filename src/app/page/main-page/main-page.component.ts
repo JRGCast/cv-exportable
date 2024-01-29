@@ -26,4 +26,7 @@ import { ExportableToolbarComponent } from '../components/exportable-toolbar/exp
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
 })
-export class MainPageComponent {}
+export class MainPageComponent {
+  showCertifications = true;
+  showProjects = true;
+}
