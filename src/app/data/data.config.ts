@@ -50,9 +50,30 @@ export const mainData: MainData = {
     },
   ],
   skills: ['React', 'Node.js', 'Jest', 'Angular', 'TypeScript', 'Java', 'Spring Boot', 'Karma/Jasmine'].sort(),
-  education: [{}],
-  certifications: [{}],
-  idioms: [{}],
+  education: [
+    {
+      instituitionName: 'Estácio de Sá',
+      url: 'https://estacio.br',
+      courseName: 'Análise e Desenvolvimento de Sistemas',
+      type: 'Graduation',
+      start: cleanUTCDateObj('2020-09-18'),
+      end: cleanUTCDateObj('2022-03-23'),
+    },
+  ],
+  certifications: [
+    {
+      entityName: 'Trybe',
+      url: 'https://www.betrybe.com',
+      courseName: 'Full Stack Developer',
+      conclusionDate: cleanUTCDateObj('2022-03-23'),
+      skillsLeaned: ['Front-end', 'Back-end', 'Computer Science'],
+    },
+  ],
+  idioms: [
+    { language: 'Portuguese', code: 'PTBR', level: 'Native' },
+    { language: 'English', code: 'ENUS', level: 'Advanced' },
+  ],
+  projects: [],
 };
 
 mainData.locationLink = `https://www.google.com/maps/place/${mainData.location}`;

@@ -8,13 +8,13 @@ export interface MainData {
   contact: {
     mail: string;
     phone: string;
-    social: {
+    social: Array<{
       name: string;
       url: string;
       icon: string;
-    }[];
+    }>;
   };
-  workExps: {
+  workExps: Array<{
     companyName: string;
     url: string;
     remoteOrNot: boolean;
@@ -23,9 +23,16 @@ export interface MainData {
     jobTitle: string;
     description: string;
     stacks: string[];
-  }[];
+  }>;
   skills: string[];
   education: any[];
-  certifications: any[];
-  idioms: any[];
+  certifications: Array<{
+    entityName: string;
+    url: string;
+    courseName: string;
+    conclusionDate: Date;
+    skillsLeaned: string[];
+  }>;
+  idioms: Array<{ language: string; code: string; level: 'Native' | 'Fluent' | 'Advanced' | 'Intermediate' | 'Basic' }>;
+  projects: any[];
 }
