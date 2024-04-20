@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from 'src/app/services/translation/translation.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,5 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-
+  tService = inject(TranslationService);
+  readonly skillData = computed(() => this.tService.getMDataSignal());
 }

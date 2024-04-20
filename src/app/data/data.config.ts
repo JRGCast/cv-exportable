@@ -1,3 +1,4 @@
+import { signal } from '@angular/core';
 import { cleanUTCDateObj } from '../utils/functions';
 import { MainData } from './types/dataconfig.model';
 
@@ -77,3 +78,6 @@ export const mainData: MainData = {
 };
 
 mainData.locationLink = `https://www.google.com/maps/place/${mainData.location}`;
+
+export const mainDataAsSignal = signal<MainData>(mainData);
+
